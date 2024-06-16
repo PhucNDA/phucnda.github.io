@@ -1,3 +1,20 @@
+- id: OpenSUN3D2
+  title: "OpenSUN3D: 2nd Workshop Challenge on Open-Vocabulary 3D Scene Understanding"
+  venue:  Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) Workshops, 2024
+  description: "<b>VinAI-3DIS</b> has ranked <b>top 1</b> in Open-Vocabulary 3D instance retrieval track with improved version of <b>Open3DIS</b>"
+  project_page: "https://opensun3d.github.io/"  
+  github: VinAIResearch/Open3DIS
+  # certificate: 'assets/OpenSUN3D_certificate_VinAI-3DIS_Phuc_Nguyen.pdf'
+  # arxiv: 2402.15321
+  # video: "..."
+  image: opensun3d2.png
+  # image_mouseover: isbnet_demo.jpg
+  authors:
+    - phucnguyen
+    - anhtran
+    - cuongpham
+    - khoinguyen
+
 - id: OpenSUN3D1
   title: "OpenSUN3D: 1st Workshop Challenge on Open-Vocabulary 3D Scene Understanding"
   venue: International Conference on Computer Vision (<b>ICCV</b>) Workshops , 2023
