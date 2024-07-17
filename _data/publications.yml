@@ -8,9 +8,8 @@
   # video: "https://www.youtube.com/watch?v=xpfhE8iy0C0"
   image: freevocab.png
   # image_mouseover: isbnet_demo.jpg
-  first_authors:
-    - phucnguyen
   authors:
+    - phucnguyen
     - minhluu
     - anhtran
     - cuongpham

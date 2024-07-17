@@ -1,3 +1,19 @@
+- id: VinMap
+  title: "VinMap: Detecting Omissions in Geographic Maps through Computer Vision"
+  venue:  International Conference on Multimedia Analysis and Pattern Recognition (<b>MAPR</b>), 2024
+  description: "(<i>VinAI Research</i> with the <i>Ministry of Information and Communications</i>). The introduction of <b>VinMap</b> dataset utilizing
+computer vision to identify counterfeit Vietnam geographic maps online."
+  github: VinAIResearch/VinMap
+  arxiv: 2407.10709
+  # video: "..."
+  image: vinmap.png
+  project_page: "https://github.com/VinAIResearch/VinMap"  
+
+  # image_mouseover: open3dis_demo.jpg
+  authors:
+    - phucnguyen
+    - anhdo
+    - minhhoai
 - id: OpenSUN3D2
   title: "OpenSUN3D: 2nd Workshop Challenge on Open-Vocabulary 3D Scene Understanding"
   venue:  Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) Workshops, 2024
