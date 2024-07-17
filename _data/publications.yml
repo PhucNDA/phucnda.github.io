@@ -1,3 +1,21 @@
+- id: FreeVocab
+  title: "Open-Ended 3D Point Cloud Instance Segmentation"
+  venue: Under Review.
+  # description: "Tackle the open-vocabulary 3D point cloud instance segmentation by using 2D prior"
+  # project_page: "https://open3dis.github.io/"
+  # github: VinAIResearch/Open3DIS
+  # arxiv: 2312.10671
+  # video: "https://www.youtube.com/watch?v=xpfhE8iy0C0"
+  image: freevocab.png
+  # image_mouseover: isbnet_demo.jpg
+  first_authors:
+    - phucnguyen
+  authors:
+    - minhluu
+    - anhtran
+    - cuongpham
+    - khoinguyen
+
 - id: Open3DIS
   title: "Open3DIS: Open-Vocabulary 3D Instance Segmentation with 2D Mask Guidance"
   venue: Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2024
