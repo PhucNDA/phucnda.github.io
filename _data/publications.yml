@@ -1,14 +1,14 @@
 - id: FreeVocab
   title: "Open-Ended 3D Point Cloud Instance Segmentation"
   venue: Arxiv Preprint.
-  description: "Introducing the Vocablulary-Free 3D point cloud instance segmentation with different solid baselines and a novel pointwise method"
+  description: "Introducing the Vocablulary-Free 3D point cloud instance segmentation with different solid baselines and a novel pointwise method using multimodal LLM"
   # project_page: "https://open3dis.github.io/"
   # github: VinAIResearch/Open3DIS
   arxiv: 2312.10671
   # video: "https://www.youtube.com/watch?v=xpfhE8iy0C0"
   image: freevocab.png
   # image_mouseover: isbnet_demo.jpg
-    first_authors:
+  first_authors:
     - phucnguyen
     - minhluu
   authors:
