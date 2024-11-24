@@ -1,3 +1,22 @@
+- id: Any3DIS
+  title: "Any3DIS: Class-Agnostic 3D Instance Segmentation by 2D Mask Tracking"
+  venue: Arxiv Preprint.
+  description: "A novel class-agnostic approach for 3D instance segmentation that leverages 2D mask tracking to segment 3D objects in point cloud scenes"
+  project_page: "https://any3dis.github.io/"
+  # github: VinAIResearch/Open3DIS
+  # arxiv: 2408.11747
+  # video: "https://www.youtube.com/watch?v=xpfhE8iy0C0"
+  image: any3dis_teaser.png
+  # image_mouseover: isbnet_demo.jpg
+  
+  authors:
+    - phucnguyen
+    - minhluu
+    - anhtran
+    - cuongpham
+    - khoinguyen
+
+
 - id: FreeVocab
   title: "Open-Ended 3D Point Cloud Instance Segmentation"
   venue: Arxiv Preprint.
