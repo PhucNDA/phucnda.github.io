@@ -18,7 +18,7 @@ computer vision to identify counterfeit Vietnam geographic maps online"
   title: "OpenSUN3D: 2nd Workshop Challenge on Open-Vocabulary 3D Scene Understanding"
   venue:  Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) Workshops, 2024
   description: "<b>VinAI-3DIS</b> has ranked <b>top 1</b> in Open-Vocabulary 3D instance retrieval track with improved version of <b>Open3DIS</b>"
-  project_page: "https://opensun3d.github.io/"  
+  project_page: "https://opensun3d.github.io/index_cvpr24.html"  
   github: VinAIResearch/Open3DIS
   # certificate: 'assets/OpenSUN3D_certificate_VinAI-3DIS_Phuc_Nguyen.pdf'
   # arxiv: 2402.15321
