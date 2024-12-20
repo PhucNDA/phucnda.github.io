@@ -23,13 +23,13 @@ name: Phuc, Nguyen Duc Anh
 position: AI Research Resident 
 email: phucnda@gmail.com
 description: >-
-  I am a research resident at [VinAI Research](https://www.vinai.io/), where I work with 3D scene understanding. Previously, I recieved a B.S. degree in Computer Science at the [University of Information Technology - VNUHCM](https://en.uit.edu.vn/).
+  I was a research resident at [VinAI Research](https://www.vinai.io/), where I worked with 3D scene understanding under supervision of [Dr. Anh Tran](https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en) and [Prof. Cuong Pham](https://sites.google.com/view/cuongpham/home). Previously, I recieved a B.S. degree in Computer Science at the [University of Information Technology - VNUHCM](https://en.uit.edu.vn/).
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://phucnda.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: phucnda
 github_username: PhucNDA
 google_scholar: 9tHv7IQAAAAJ&hl
+# twitter_username: phucnda
 # google_analytics: G-MFWSBLRKG0
 
 # Build settings

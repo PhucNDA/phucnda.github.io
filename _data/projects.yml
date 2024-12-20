@@ -2,7 +2,7 @@
   title: "VinMap: Detecting Omissions in Geographic Maps through Computer Vision"
   venue:  International Conference on Multimedia Analysis and Pattern Recognition (<b>MAPR</b>), 2024
   description: "(<i>VinAI Research</i> with the <i>Ministry of Information and Communications</i>). The introduction of <b>VinMap</b> dataset utilizing
-computer vision to identify counterfeit Vietnam geographic maps online."
+computer vision to identify counterfeit Vietnam geographic maps online"
   github: VinAIResearch/VinMap
   arxiv: 2407.10709
   # video: "..."
@@ -48,6 +48,16 @@ computer vision to identify counterfeit Vietnam geographic maps online."
     - anhtran
     - cuongpham
     - khoinguyen
+
+- id: BSThesis
+  title: "HA-RDet: Hybrid Anchor Rotation Detector for Oriented Object Detection"
+  venue: Bachelor's Thesis, 2022
+  description: "Hybrid-Anchor Rotation Detector (<b>HA-RDet</b>), which combines the advantages of both anchor-based and anchor-free schemes for oriented object detection" 
+  github: PhucNDA/HA-RDet
+  arxiv: 2412.14379
+  image: HARDet.png
+  authors:
+    - phucnguyen
 
 
 
