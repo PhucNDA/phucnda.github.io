@@ -16,7 +16,7 @@ computer vision to identify counterfeit Vietnam geographic maps online"
     - minhhoai
 - id: OpenSUN3D2
   title: "OpenSUN3D: 2nd Workshop Challenge on Open-Vocabulary 3D Scene Understanding"
-  venue:  Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) Workshops, 2024
+  venue:  IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) Workshops, 2024
   description: "<b>VinAI-3DIS</b> has ranked <b>top 1</b> in Open-Vocabulary 3D instance retrieval track with improved version of <b>Open3DIS</b>"
   project_page: "https://opensun3d.github.io/index_cvpr24.html"  
   github: VinAIResearch/Open3DIS
@@ -33,7 +33,7 @@ computer vision to identify counterfeit Vietnam geographic maps online"
 
 - id: OpenSUN3D1
   title: "OpenSUN3D: 1st Workshop Challenge on Open-Vocabulary 3D Scene Understanding"
-  venue: International Conference on Computer Vision (<b>ICCV</b>) Workshops , 2023
+  venue: IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) Workshops , 2023
   description: "<b>VinAI-3DIS</b> has ranked <b>top 2</b> in Open-Vocabulary 3D instance retrieval track"
   project_page: "https://opensun3d.github.io/index_iccv23.html"  
   github: PhucNDA/Open3DSceneUnderstanding
