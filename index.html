@@ -58,25 +58,20 @@
     </div>
 
     <!--Dynamic Nav Bar-->
-
-    <!--Particles effect-->
-    <div id="home">
-        <section class="center">
-            <div id="particles-js"></div>
-        </section>
-    </div>
     <center>
         
         <!-- Home Section -->
-        <div class="container d-flex align-items-center justify-content-center h-100" style="margin-top: -140px;">
-
+        <div class="container" style="padding-top: 80px;">
 
             <div class="row w-100 text-center text-md-left align-items-center">
 
                 <div class="col-md-8"><br>
-                    <h1><span class="span-duc-anh">Duc Anh</span> <strong class="phuc-nguyen">Phuc Nguyen</strong></h1>
+                    <h1>
+                        <span class="gradient-name">Phuc Nguyen</span>
+                        <span class="normal-name faint">Duc Anh</span>
+                      </h1>                                           
 <br>
-                    <p>I’m an incoming PhD student at 
+                    <p>I’m a PhD student at 
                         <a href="https://www.umd.edu/" target="_blank"><strong>University of Maryland, College Park</strong></a>!
                      </p>
                      
@@ -87,7 +82,7 @@
                      </p>
                      
                      <p>I was an AI Research Resident at 
-                        <a href="https://vinai.io/" target="_blank"><strong>VinAI Research, Vietnam</strong></a>, where I worked with 3D scene understanding and multimodal Large Language Models under the supervision of 
+                        <a href="https://vinai.io/" target="_blank"><strong>VinAI Research (acquired by Qualcomm)</strong></a>, where I worked with 3D scene understanding and multimodal Large Language Models under the supervision of 
                         <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en" target="_blank"><strong>Dr. Anh Tran</strong></a> and 
                         <a href="https://sites.google.com/view/cuongpham/home" target="_blank"><strong>Prof. Cuong Pham</strong></a>.
                      </p>
@@ -221,12 +216,20 @@
                             </svg>
                         </a> -->
 
-                        
+                    </div>
+                    <div class="org-logos-container mt-4 mb-5">
+                    <div class="org-logos-wrapper d-flex flex-wrap justify-content-center align-items-center mt-4">
+                        <a href="https://umd.edu/"><img src="assets/images/umdlogo.png" class="org-logo" alt="UMD" style="height: 70px;"></a>
+                        <a href="https://spreeai.com/"><img src="assets/images/spreeailogo.png" class="org-logo" alt="SpreeAI" style="height: 50px;"></a>
+                        <a href="https://www.vinai.io/"><img src="assets/images/vinailogo.png" class="org-logo" alt="VinAI" tyle="height: 40px;"></a>
+                        <a href="https://www.qualcomm.com/"><img src="assets/images/qualcommlogo.svg" class="org-logo" alt="Qualcomm" style="height: 40px;"></a>
+                        <a href="https://en.uit.edu.vn/"><img src="assets/images/uitlogo.png" class="org-logo" alt="UIT" style="height: 80px;"></a>
+                      </div>                      
                     </div>
                 </div>
             </div>
         </div>
-        <br> <br> <br>         <br> <br> <br> 
+
     </center>
 
     <br><br><br>
@@ -288,10 +291,7 @@
 
     <script src="assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-    <script src="assets/js/particle.js"></script>      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 
     <div class="container mt-5" hidden="hidden">
         {{ content }}

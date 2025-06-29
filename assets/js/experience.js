@@ -6,7 +6,7 @@ const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
     title: "AI/ML Engineer",
-    cardImage: "assets/images/spreeai.jpeg",
+    cardImage: "assets/images/spreeai.png",
     place: "SpreeAI",
     time: "(Nov, 2024 - present)",
     desp: `<br>
@@ -22,7 +22,7 @@ const exp = [
   {
     title: "AI Research Resident",
     cardImage: "assets/images/VinAi-Logo.png",
-    place: "VinAI Research",
+    place: "VinAI Research (Acquired by QualComm)",
     time: "(Feb, 2023 - Nov, 2024)",
     desp: `<br>
 <div style="text-align: center; font-weight: bold;">3D Perception / Scene Understanding / Vision-Language Model

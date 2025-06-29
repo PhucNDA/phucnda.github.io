@@ -836,11 +836,48 @@ a:hover {
   color: orange;
   text-decoration: underline;
 }
-/* Làm mờ chữ "Duc Anh" nhưng không quá mờ */
-.span-duc-anh {
-  opacity: 0.5; /* Điều chỉnh mức độ rõ nét (có thể thử 0.7 hoặc 0.8) */
-  font-weight: 400; /* Giữ độ đậm bình thường */
+
+.gradient-name {
+  background: linear-gradient(to right, #E21833, #FFC600, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
 }
-html, body {
-  cursor: auto;
+
+html[light-mode="dark"] .gradient-name {
+  background: linear-gradient(to right, #E21833, #FFC600, #FFFFFF) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+.normal-name {
+  color: inherit; /* Kế thừa màu văn bản thông thường */
+  -webkit-text-fill-color: initial !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+}
+.faint {
+  opacity: 0.5; /* 50% mờ. Có thể chỉnh thành 0.6 hoặc 0.3 tùy ý */
+}
+
+.org-logos-container {
+  background-color: #fff; /* nền cố định, bất chấp dark mode */
+  padding: 20px 10px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.org-logo {
+  height: 80px;
+  margin: 10px 15px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.2));
+}
+.org-logo:hover {
+  transform: scale(1.05);
 }
