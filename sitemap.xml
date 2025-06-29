@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Trang chính -->
+  <url>
+    <loc>https://phucnda.github.io/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Tin tức & cập nhật -->
+  <url>
+    <loc>https://phucnda.github.io/news.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Kinh nghiệm làm việc -->
+  <url>
+    <loc>https://phucnda.github.io/experience.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Công trình nghiên cứu -->
+  <url>
+    <loc>https://phucnda.github.io/research.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Quá trình học tập -->
+  <url>
+    <loc>https://phucnda.github.io/education.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>
