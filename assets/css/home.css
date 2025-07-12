@@ -863,13 +863,16 @@ html[light-mode="dark"] .gradient-name {
 }
 
 .org-logos-container {
-  background-color: #fff; /* nền cố định, bất chấp dark mode */
+  background-color: #fff;
   padding: 20px 10px 40px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   max-width: 1000px;
+  width: 100%; /* ✅ thêm dòng này */
+  box-sizing: border-box; /* ✅ tránh tràn padding */
   margin: 0 auto;
 }
+
 
 .org-logo {
   height: 80px;
