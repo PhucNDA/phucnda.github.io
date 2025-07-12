@@ -868,6 +868,7 @@ html[light-mode="dark"] .gradient-name {
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -892,5 +893,23 @@ html[light-mode="dark"] .gradient-name {
     flex: 0 0 45%; /* 2 logo mỗi dòng, với khoảng cách */
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .org-logos-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .org-logo {
+    height: 50px !important;
+    margin: 8px;
+  }
+
+  .org-logos-wrapper a {
+    flex: 0 0 40%;
+    justify-content: center;
+    display: flex;
   }
 }
