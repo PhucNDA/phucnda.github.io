@@ -34,7 +34,7 @@ const exp = [
   <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en" class="highlight-title" target="_blank">Dr. Anh Tran</a>, 
   <a href="https://sites.google.com/view/cuongpham/home" class="highlight-title" target="_blank">Prof. Cuong Pham</a> and 
   <a href="https://scholar.google.com/citations?user=hRV0tY4AAAAJ&hl=en" class="highlight-title" target="_blank">Prof. Minh Hoai</a>. 
-  During this time, I first-authored several top-tier publications and achieved recognition at workshops (ICCV'23, CVPR'24, CVPR'25, …).
+  During this time, I first-authored several top-tier publications and achieved recognition at workshops (ICCV'23, CVPR'24, CVPR'25, ICCV'25,...).
 </div>`
   },
   {
