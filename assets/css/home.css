@@ -898,7 +898,7 @@ html[light-mode="dark"] .gradient-name {
 
 @media (max-width: 768px) {
   .org-logos-container {
-    max-width: 80% !important;
+    max-width: 90% !important;
     width: 100% !important;
     padding: 15px;
   }
