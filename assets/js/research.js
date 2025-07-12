@@ -4,6 +4,24 @@ const researchTable = document.querySelector(".main");
 
 const research = [
   {
+    title: "Open-Ended 3D Point Cloud Instance Segmentation",
+    authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Minh Luu*, Anh Tran, Cuong Pham, Khoi Nguyen",
+      link: "https://arxiv.org/abs/2408.11747",
+    conferences:
+      "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops",
+    researchYr: 2025,
+    citebox: "popup2",
+    image: "assets/images/openended.png",
+    citation: {
+      vancouver:
+        "Open-vocabulary 3D Instance Segmentation methods (OV-3DIS) have recently demonstrated their generalization ability to unseen objects. However, these methods still depend on predefined class names during inference, restricting agents' autonomy. To mitigate this constraint, we propose a novel problem termed Open-Ended 3D Instance Segmentation (OE-3DIS), which eliminates the necessity for predefined class names during testing. We present a comprehensive set of strong baselines inspired by OV-3DIS methodologies, utilizing 2D Multimodal Large Language Models. In addition, we introduce a novel token aggregation strategy that effectively fuses information from multiview images. To evaluate the performance of our OE-3DIS system, we benchmark both the proposed baselines and our method on two widely used indoor datasets: ScanNet200 and ScanNet++. Our approach achieves substantial performance gains over the baselines on both datasets. Notably, even without access to ground-truth object class names during inference, our method outperforms Open3DIS, the current state-of-the-art in OV-3DIS.",
+    },
+    abstract:
+      "Introducing the Vocablulary-Free 3D point cloud instance segmentation with different solid baselines and a novel pointwise method using multimodal LLM.",
+    absbox: "absPopup2",
+  },
+
+  {
     title: "Any3DIS: Class-Agnostic 3D Instance Segmentation by 2D Mask Tracking",
     authors: "<strong class='highlight-name'>Phuc Nguyen</strong>, Minh Luu, Anh Tran, Cuong Pham, Khoi Nguyen",
     link: "https://any3dis.github.io/",
@@ -19,24 +37,6 @@ const research = [
     abstract:
       "A novel class-agnostic approach for 3D instance segmentation that leverages 2D mask tracking to segment 3D objects in point cloud scenes.",
     absbox: "absPopup1",
-  },
-
-  {
-    title: "Open-Ended 3D Point Cloud Instance Segmentation",
-    authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Minh Luu*, Anh Tran, Cuong Pham, Khoi Nguyen",
-      link: "https://arxiv.org/abs/2408.11747",
-    conferences:
-      "Arxiv Preprint",
-    researchYr: 2024,
-    citebox: "popup2",
-    image: "assets/images/openened.png",
-    citation: {
-      vancouver:
-        "Open-Vocab 3D Instance Segmentation methods (OV-3DIS) have recently demonstrated their ability to generalize to unseen objects. However, these methods still depend on predefined class names during testing, restricting the autonomy of agents. To mitigate this constraint, we propose a novel problem termed Open-Ended 3D Instance Segmentation (OE-3DIS), which eliminates the necessity for predefined class names during testing. Moreover, we contribute a comprehensive set of strong baselines, derived from OV-3DIS approaches and leveraging 2D Multimodal Large Language Models. To assess the performance of our OE-3DIS system, we introduce a novel Open-Ended score, evaluating both the semantic and geometric quality of predicted masks and their associated class names, alongside the standard AP score. Our approach demonstrates significant performance improvements over the baselines on the ScanNet200 and ScanNet++ datasets. Remarkably, our method surpasses the performance of Open3DIS, the current state-of-the-art method in OV-3DIS, even in the absence of ground-truth object class names.",
-    },
-    abstract:
-      "Introducing the Vocablulary-Free 3D point cloud instance segmentation with different solid baselines and a novel pointwise method using multimodal LLM.",
-    absbox: "absPopup2",
   },
 
   {
@@ -101,7 +101,7 @@ const research = [
     authors: "<strong class='highlight-name'>Phuc Nguyen</strong>, Anh Tran, Cuong Pham, Khoi Nguyen",
     link: "https://opensun3d.github.io/index_iccv23.html",
     conferences:
-      "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops",
+      "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops",
     researchYr: 2023,
     citebox: "popup6",
     image: "assets/images/opensun1.png",
@@ -120,7 +120,8 @@ const research = [
     authors: "<strong class='highlight-name'>Phuc Nguyen</strong>",
     link: "https://arxiv.org/abs/2412.14379",
     conferences:
-      "Bachelor's Thesis",
+      "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops - 2025",
+    subconference: "Bachelor's Thesis",
     researchYr: 2022,
     citebox: "popup7",
     image: "assets/images/hardet.png",
@@ -169,6 +170,7 @@ const fillData = () => {
       link,
       authors,
       conferences,
+      subconference,
       researchYr,
       citebox,
       citation,
@@ -179,18 +181,15 @@ const fillData = () => {
             <tr data-aos="zoom-in-left"> 
                 <td class="imgCol"><img src="${image}" class="rImg"></td>
                 <td class = "researchTitleName">
-                    <div class="img-div">
-                        <span class="imgResponsive">
-                            <img src="${image}" class="imgRes">
-                        </span>
-                    </div>
                     <a href="${link ? link : '#'}" target="_blank" class="paperTitle"> ${title} </a>
                     <div class = "authors"> ${authors} </div> 
                     
-                    <div class="rConferences"> ${highlightConferenceAcronym(conferences)} 
+                   <div class="rConferences">
+ ${highlightConferenceAcronym(conferences)} 
+    ${subconference ? `<div class="subConf">${highlightConferenceAcronym(subconference)}</div>` : ""}
+    <div class="researchY">${researchYr}</div>
+</div>
 
-                        <div class="researchY">${researchYr}</div>
-                    </div>
                     
                     <!--BUTTONS-->
 <div class="d-flex" style="margin-right:5%;">

@@ -869,18 +869,18 @@ SVG ANIMATIONS PROJECT PAGE
   width: 100%; /* Mở rộng toàn bộ chiều ngang */
   max-width: none; /* Loại bỏ giới hạn chiều rộng */
   padding: 20px 40px; /* Giữ khoảng cách nội dung */
-  overflow-x: auto; /* Thêm thanh cuộn ngang nếu nội dung quá dài */
+  overflow-x: hidden; /* Thêm thanh cuộn ngang nếu nội dung quá dài */
   white-space: nowrap; /* Giữ nội dung trên một dòng duy nhất */
 }
 
 .news-item p {
-  display: inline-block; /* Giữ mỗi dòng là một khối ngang */
-  white-space: nowrap; /* Không cho phép xuống dòng */
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block; /* mỗi đoạn là một khối riêng */
+  white-space: normal; /* cho phép xuống dòng */
+  overflow: visible;
+  text-overflow: unset;
   font-size: 16px;
   line-height: 1.6;
-  word-spacing: 2px; /* Tạo khoảng cách giữa các từ */
+  word-spacing: 2px;
 }
 
 .news-item p strong {
@@ -898,23 +898,13 @@ SVG ANIMATIONS PROJECT PAGE
 .news-link:hover {
   text-decoration: underline;
 }
-.news-item p {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 16px;
-  line-height: 1.8; /* Giữ line-height nhỏ */
-  padding-top: 2.5px; /* Giữ phần trên không bị mất */
-  padding-bottom: 2.5px; /* Giữ phần dưới không bị mất */
-}
 
 .news-container {
     max-width: 100%; /* Đảm bảo nó không vượt quá chiều rộng màn hình */
     width: 100%; /* Lấp đầy khung cha */
     max-height: 400px; /* Giới hạn chiều cao để có thanh cuộn dọc */
     overflow-y: auto; /* Tạo thanh cuộn dọc */
-    overflow-x: auto; /* Cho phép cuộn ngang nếu cần */
+    overflow-x: hidden; /* Cho phép cuộn ngang nếu cần */
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
@@ -971,4 +961,25 @@ SVG ANIMATIONS PROJECT PAGE
 .light-ray {
   display: none;
   animation: none;
+}
+/* Ngăn kéo ngang toàn bộ trang trên mobile */
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column !important;
+  }
+
+  .card, .column {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
 }
