@@ -915,3 +915,40 @@ html[light-mode="dark"] .gradient-name {
   }
 }
 
+@media (max-width: 768px) {
+  .gradient-name::after {
+    content: "";
+    display: block;
+  }
+
+  .container .row .col-md-8 {
+    text-align: left !important;
+  }
+}
+@media (max-width: 768px) {
+  .gradient-name {
+    text-align: center;
+    word-break: keep-all;
+    white-space: normal;
+  }
+}
+.name-split {
+  text-align: left;
+  display: inline-block;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .name-split {
+    text-align: center;
+    display: inline-block;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 768px) {
+  .name-split {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
