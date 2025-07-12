@@ -898,18 +898,20 @@ html[light-mode="dark"] .gradient-name {
 
 @media (max-width: 768px) {
   .org-logos-container {
-    max-width: 100%;
+    max-width: 80% !important;
+    width: 100% !important;
     padding: 15px;
-  }
-
-  .org-logo {
-    height: 50px !important;
-    margin: 8px;
   }
 
   .org-logos-wrapper a {
     flex: 0 0 40%;
-    justify-content: center;
+    margin: 8px;
     display: flex;
+    justify-content: center;
+  }
+
+  .org-logo {
+    height: 50px !important;
   }
 }
+
