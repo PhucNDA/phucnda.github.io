@@ -865,13 +865,6 @@ SVG ANIMATIONS PROJECT PAGE
   animation-duration: 3.3s;
   transform-origin: 785.132px 295.833px;
 }
-.news-container {
-  width: 100%; /* Mở rộng toàn bộ chiều ngang */
-  max-width: none; /* Loại bỏ giới hạn chiều rộng */
-  padding: 20px 40px; /* Giữ khoảng cách nội dung */
-  overflow-x: hidden; /* Thêm thanh cuộn ngang nếu nội dung quá dài */
-  white-space: nowrap; /* Giữ nội dung trên một dòng duy nhất */
-}
 
 .news-item p {
   display: block; /* mỗi đoạn là một khối riêng */
@@ -900,17 +893,16 @@ SVG ANIMATIONS PROJECT PAGE
 }
 
 .news-container {
-    max-width: 100%; /* Đảm bảo nó không vượt quá chiều rộng màn hình */
-    width: 100%; /* Lấp đầy khung cha */
-    max-height: 400px; /* Giới hạn chiều cao để có thanh cuộn dọc */
-    overflow-y: auto; /* Tạo thanh cuộn dọc */
-    overflow-x: hidden; /* Cho phép cuộn ngang nếu cần */
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  max-height: none;
+  overflow: visible;
 }
+
 .news-link:hover {
   color: rgb(255, 159, 33); /* Chuyển sang màu cam khi trỏ chuột vào */
   text-decoration: underline; /* Gạch chân để nhấn mạnh */
