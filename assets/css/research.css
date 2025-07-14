@@ -176,6 +176,11 @@ body {
   color: var(--hover-link);
 }
 
+html[light-mode="light"] .paperTitle:hover {
+  color: rgb(236, 103, 125);  /* Màu giống dark mode */
+  text-decoration: none;
+}
+
 .paperTitle {
   padding: 8px 0;
   font-size: 20px;
