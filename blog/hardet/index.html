@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HA-RDet">
+  <meta name="keywords" content="HA-RDet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> HA-RDet </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    .rcorners1 {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px;
+      font-size: 120%;
+      color: #5c5c5c;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">HA-RDet <br />
+              <p class="title is-3 publication-title"> Hybrid Anchor Rotation Detector for Oriented Object Detection
+              <!-- <p class="title is-3 publication-title">CVPR 2024</p> -->
+            </h1>
+            <h1 class="title is-4" style="color: #5c5c5c;">ICCV 2025 - SEA</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://phucnda.github.io/">Phuc Nguyen</a></span>
+              <!-- <span class="author-block">
+                <a href="https://github.com/Minhluu2911">Minh Luu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/cuongpham/home">Cuong Pham</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.khoinguyen.org/">Khoi Nguyen</a><sup>1</sup>
+              </span> -->
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="margin-right: 1em;">University of Information Technology, Vietnam</span>
+              <!-- <span class="author-block" style="margin-right: 1em;"><sup>2</sup>Posts & Telecommunications Inst. of Tech.</span> -->
+            
+            <div class="is-size-5 publication-authors"></div>
+              <!-- <span class="author-block" style="margin-right: 1em;"><sup>*</sup>Equal contribution</span> -->
+            </div>
+            <!-- Link-->
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2412.14379v2" class="external-link button is-normal is-rounded is-dark" enabled>
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+            <!-- <span class="link-block">
+              <a href="assets/Open3DIS_supplementary.pdf" class="external-link button is-normal is-rounded is-dark" disabled>
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Supplementary</span>
+              </a>
+            </span> -->
+            
+            <!-- <span class="link-block">
+              <a href="https://arxiv.org/pdf/2412.14379v2" class="external-link button is-normal is-rounded is-dark" enabled>
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </span> -->
+
+            <span class="link-block">
+              <a href="https://github.com/PhucNDA/HA-RDet" class="external-link button is-normal is-rounded is-dark" enabled>
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            <!-- <span class="link-block">
+              <a href="https://www.youtube.com/watch?v=xpfhE8iy0C0" class="external-link button is-normal is-rounded is-dark" disabled>
+                <span class="icon">
+                  <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span> -->
+                </a>
+            </span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">HA-RDet on Google Earth</h2>
+          
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <video src="assets/hardet_demo.mp4" style="max-width:100%;" controls autoplay muted loop>
+                Your browser does not support the video tag.
+              </video>
+              <h2 class="subtitle has-text-centered">
+              </h2>
+            </div> 
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Oriented object detection in aerial images poses a significant challenge due to their varying sizes and orientations. Current state-of-the-art detectors typically rely on either two-stage or one-stage approaches, often employing Anchor-based strategies, which can result in computationally expensive operations due to the redundant number of generated anchors during training. In contrast, Anchor-free mechanisms offer faster processing but suffer from a reduction in the number of training samples, potentially impacting detection accuracy. To address these limitations, we propose the Hybrid-Anchor Rotation Detector (HA-RDet), which combines the advantages of both anchor-based and anchor-free schemes for oriented object detection. By utilizing only one preset anchor for each location on the feature maps and refining these anchors with our OrientationAware Convolution technique, HA-RDet achieves competitive accuracies, including 75.41 mAP on DOTA-v1, 65.3 mAP on DIOR-R, and 90.2 mAP on HRSC2016, against current anchor-based state-of-the-art methods, while significantly reducing computational resources.
+            </p>     
+          </div>
+
+            <span class="cd-handle"></span>
+          </figure> <!-- cd-image-container -->
+        </div>
+      </div>
+
+      <!--Method-->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="assets/ha-rdet.jpg" style="max-width:100%" />
+          <h2 class="subtitle has-text-centered">
+          </h2>
+        </div>
+      </div>
+
+            
+
+            <div class="content has-text-justified">
+            <p>
+              Illustration of the architecture of the proposed HA-RDet. At first, an aerial image is passed through the FPN backbone to extract deep features. Then, the extracted features are fed through the Hybrid-Anchor RPN to produce horizontal anchors via an Anchor-free assigner strategy on rectangularized oriented ground truths. The anchors are refined with the novel Orientation-aware Convolution and the later Anchor-based head to produce high-quality horizontal proposals. After that, the lightweight proposal transformation network learns to produce oriented proposals from predicted RoI Align processed horizontal proposals. Finally, these oriented proposals are refined through oriented bounding box heads for classification and bounding box regression.
+            </p>                    
+            </div>
+            <div class="container is-max-desktop">
+              <div class="hero-body">
+                <img src="assets/hardet_conv.jpg" style="max-width:100%" />
+                <h2 class="subtitle has-text-centered">
+                </h2>
+              </div>
+            </div>
+            <div class="content has-text-justified">
+            <p>
+              The shape offsets are computed via anchor size; ground-truth orientation is adopted to perform orientation offsets calculation. Shape offsets and orientation offsets produce the final features used for training the Anchor-based refinement stage. The final computed features are orientation-awareness, surging HA-RDet performance significantly.
+            </p>
+          </div>
+          </div>
+        </div>
+
+      <!-- Concurrent Work. -->
+
+      <!-- <br /><br />
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <p id="explanatory-video"></p>
+          <h2 class="title is-3">Demo Instance-Aware Point Cloud Features</h2>
+          <video controls poster="assets/starter_gui.png">
+            <source src="assets/Open3DIS_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+          <br /><br /> -->
+          
+          <br /><br />
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">DOTA, DIOR-R HRSC Benchmarks</h2>
+                <div class="container is-max-desktop">
+                  <div class="hero-body">
+                    <img src="assets/hardet_quali.jpg" style="max-width:100%" />
+                    <div class="content has-text-justified">
+                      We propose HA-RDet, a Hybrid-Anchor training scheme that integrates the novel O-AwareConv to tackle two critical challenges in oriented object detection: the scarcity of positive samples and the risk of over-encoding geometric information. HA-RDet bridges the gap between one-stage and two-stage detection paradigms, striking a balance between training/inference efficiency and detection accuracy. Our method is particularly well-suited for Earth Observation applications, where aerial and satellite imagery often contain densely packed, arbitrarily oriented objects. Use cases include maritime monitoring, urban development assessment, and disaster response. The ability to detect rotated objects precisely is crucial in these contexts, where misalignment can lead to misclassification or missed detections. HA-RDet’s computational efficiency, achieved via a reduced anchor set and lightweight orientation-aware refinement, makes it deployable on edge devices such as drones or low-power remote sensing platforms. Notably, HA-RDet has been quantized and deployed on campus drone systems, enabling continuous monitoring and autonomous governance.
+                    </h2>
+                </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <br /><br />
+          <h2 class="title is-3">BibTeX</h2>
+          <pre><code>
+@article{nguyen2024ha,
+  title={HA-RDet: Hybrid Anchor Rotation Detector for Oriented Object Detection},
+  author={Nguyen, Phuc DA},
+  journal={arXiv preprint arXiv:2412.14379},
+  year={2024}
+}
+          </code></pre>
+        </div>
+        </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                  It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+                  We would like to thank Utkarsh Sinha and Keunhong Park.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</html>
