@@ -6,7 +6,7 @@ const research = [
   {
     title: "Open-Ended 3D Point Cloud Instance Segmentation",
     authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Minh Luu*, Anh Tran, Cuong Pham, Khoi Nguyen",
-      link: "https://arxiv.org/abs/2408.11747",
+      link: "https://phucnda.github.io/blog/oe3dis/index.html",
     conferences:
       "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops",
     researchYr: 2025,
@@ -118,7 +118,7 @@ const research = [
     title:
       "HA-RDet: Hybrid Anchor Rotation Detector for Oriented Object Detection",
     authors: "<strong class='highlight-name'>Phuc Nguyen</strong>",
-    link: "https://arxiv.org/abs/2412.14379",
+    link: "https://phucnda.github.io/blog/hardet/index.html",
     conferences:
       "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops - 2025",
     subconference: "Bachelor's Thesis",
