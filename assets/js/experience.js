@@ -8,14 +8,14 @@ const exp = [
     title: "AI/ML Engineer",
     cardImage: "assets/images/spreeai.png",
     place: "SpreeAI",
-    time: "(Nov, 2024 - present)",
+    time: "(Nov, 2024 - Sep 2025)",
     desp: `<br>
-<div style="text-align: center; font-weight: bold;">Multimodal-LLM / Virtual Try-On / Mixture of Experts</div>
+<div style="text-align: center; font-weight: bold;">Multimodal-LLM / Virtual Try-On / Active Continual Learning</div>
 <br>
 <div>
-  I’m working on multimodal representations for physically-grounded understanding of the human body and garments with 
+  I worked on multimodal representations for physically-grounded understanding of the human body and garments with 
   <a href="https://www.cs.cmu.edu/~aayushb/" class="highlight-title" target="_blank">Dr. Aayush Bansal</a> and 
-  <a href="https://minhpvo.github.io/" class="highlight-title" target="_blank">Dr. Minh Vo</a>.
+  <a href="https://minhpvo.github.io/" class="highlight-title" target="_blank">Dr. Minh Vo</a>. Our project is still ongoing!
 </div>`
 
   },
