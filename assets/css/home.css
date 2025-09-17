@@ -113,7 +113,7 @@ body{
 }
 
 a.socialicon {
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+ box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .social-icons {
@@ -909,11 +909,11 @@ html[light-mode="dark"] .gradient-name {
     display: flex;
     justify-content: center;
   }
-
+/* 
   .org-logo {
     height: 50px !important;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .gradient-name::after {
@@ -952,3 +952,28 @@ html[light-mode="dark"] .gradient-name {
   }
 }
 
+@media (max-width: 768px) {
+  .logo-umd {
+    height: 65px !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo-spreeai {
+    height: 40px !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo-vinai {
+    height: 60px !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo-qualcomm {
+    height: 40px !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo-uit {
+    height: 70px !important;
+  }
+}

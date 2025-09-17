@@ -8,7 +8,7 @@ const exp = [
     title: "AI/ML Engineer",
     cardImage: "assets/images/spreeai.png",
     place: "SpreeAI",
-    time: "(Nov, 2024 - Sep 2025)",
+    time: "(Nov, 2024 - Sep, 2025)",
     desp: `<br>
 <div style="text-align: center; font-weight: bold;">Multimodal-LLM / Virtual Try-On / Active Continual Learning</div>
 <br>
