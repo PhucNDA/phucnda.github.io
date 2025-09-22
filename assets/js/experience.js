@@ -15,7 +15,7 @@ const exp = [
 <div>
   I worked on multimodal representations for physically-grounded understanding of the human body and garments with 
   <a href="https://www.cs.cmu.edu/~aayushb/" class="highlight-title" target="_blank">Dr. Aayush Bansal</a> and 
-  <a href="https://minhpvo.github.io/" class="highlight-title" target="_blank">Dr. Minh Vo</a>. Our project is still ongoing!
+  <a href="https://minhpvo.github.io/" class="highlight-title" target="_blank">Dr. Minh Vo</a>.
 </div>`
 
   },
