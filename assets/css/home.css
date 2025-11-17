@@ -901,6 +901,7 @@ html[light-mode="dark"] .gradient-name {
     max-width: 90% !important;
     width: 100% !important;
     padding: 15px;
+    overflow: hidden;
   }
 
   .org-logos-wrapper a {
@@ -910,6 +911,13 @@ html[light-mode="dark"] .gradient-name {
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  /* Logo UMD nhỏ hơn chút so với các logo khác */
+  .logo-umd {
+    max-width: 200%;           /* giới hạn chiều ngang, tránh lòi khung */
+  }
+}
+
 
 @media (max-width: 768px) {
   .gradient-name::after {
