@@ -909,11 +909,7 @@ html[light-mode="dark"] .gradient-name {
     display: flex;
     justify-content: center;
   }
-/* 
-  .org-logo {
-    height: 50px !important;
-  }
-} */
+}
 
 @media (max-width: 768px) {
   .gradient-name::after {
@@ -976,4 +972,38 @@ html[light-mode="dark"] .gradient-name {
   .logo-uit {
     height: 70px !important;
   }
+}
+
+/* ----- Khung mờ quanh phần News ----- */
+.news-content{
+  /* bo góc + nền mờ + bóng giữ nguyên nếu bạn thích */
+  border-radius: 15px;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+  /* khoảng cách trong/ngoài khung (cho gọn hơn) */
+  padding: 12px 32px;       /* top/bot 12px, left/right 32px */
+  margin: 24px auto;
+
+  /* giới hạn chiều cao và bật cuộn dọc */
+  max-width: 950px;
+  max-height: 420px;        /* bạn muốn thấp/cao hơn thì chỉnh số này */
+  overflow-y: auto;         /* <— quan trọng để cuộn */
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch; /* mượt trên iOS */
+  box-sizing: border-box;
+  
+}
+@media (max-width: 768px){
+  .news-content{ max-height: 360px; }
+}
+/* Bỏ khoảng trống trên và dưới phần News */
+.news-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.news-title {
+  margin-top: 0 !important;
+  margin-bottom: 5px !important; /* thu nhỏ khoảng cách dưới tiêu đề */
 }
