@@ -911,6 +911,14 @@ html[light-mode="dark"] .gradient-name {
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  /* Logo UMD nhỏ hơn chút so với các logo khác */
+  .logo-umd {
+    height: 60px !important;  /* trước là 75px */
+    max-width: 85%;           /* giới hạn chiều ngang, tránh lòi khung */
+  }
+}
+
 
 @media (max-width: 768px) {
   .gradient-name::after {
