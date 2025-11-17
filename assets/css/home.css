@@ -914,7 +914,7 @@ html[light-mode="dark"] .gradient-name {
 @media (max-width: 768px) {
   /* Logo UMD nhỏ hơn chút so với các logo khác */
   .logo-umd {
-    max-width: 200%;           /* giới hạn chiều ngang, tránh lòi khung */
+    max-width: 250%;           /* giới hạn chiều ngang, tránh lòi khung */
   }
 }
 
