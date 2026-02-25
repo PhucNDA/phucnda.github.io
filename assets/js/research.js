@@ -3,6 +3,23 @@
 const researchTable = document.querySelector(".main");
 
 const research = [
+    {
+    title: "OpenVO: Open-World Visual Odometry with Temporal Dynamics Awareness",
+    authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Anh N. Nhu*, Ming C. Lin",
+      link: "https://openvo.github.io/",
+    conferences:
+      "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    researchYr: 2026,
+    citebox: "popup2",
+    image: "assets/images/openvo.png",
+    citation: {
+      vancouver:
+        "OpenVO effectively estimates real-world–scale ego-motion from monocular dashcam footage with varying observation rates and uncalibrated cameras, enabling robust trajectory dataset construction from rare driving events recorded in dashcam. Existing VO methods are trained on fixed observation frequency (e.g., 10Hz or 12Hz), completely overlooking temporal dynamics information. Many prior methods also require calibrated cameras with known intrinsic parameters. Consequently, their performance degrades when (1) deployed under unseen observation frequencies or (2) applied to uncalibrated cameras. These significantly limit their generalizability to many downstream tasks, such as extracting trajectories from dashcam footage. To address these challenges, OpenVO (1) explicitly encodes temporal dynamics information within a two-frame pose regression framework and (2) leverages 3D geometric priors derived from foundation models. We validate our method on three major autonomous-driving benchmarks -- KITTI, nuScenes, and Argoverse 2 -- achieving more than 20% performance improvement over state-of-the-art approaches. Under varying observation rate settings, our method is significantly more robust, achieving 46%–92% lower errors across all metrics. These results demonstrate the versatility of OpenVO for real-world 3D reconstruction and diverse downstream applications.",
+    },
+    abstract:
+      "We introduce OpenVO, a novel framework for Open-world Visual Odometry (VO) with temporal awareness under limited input conditions.",
+    absbox: "absPopup8",
+  },
   {
     title: "Open-Ended 3D Point Cloud Instance Segmentation",
     authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Minh Luu*, Anh Tran, Cuong Pham, Khoi Nguyen",
@@ -86,7 +103,7 @@ const research = [
       "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops",
     researchYr: 2024,
     citebox: "popup5",
-    image: "assets/images/opensun.png",
+    image: "assets/images/opensun3d2.png",
     citation: {
       vancouver:
         "The ability to perceive, understand and interact with arbitrary 3D environments is a long-standing goal in both academia and industry with applications in AR/VR as well as robotics. Current 3D scene understanding models are largely limited to recognizing a closed set of pre-defined object classes. Recently, large visual-language models, such as CLIP, have demonstrated impressive capabilities trained solely on internet-scale image-language pairs. Some initial works have shown that these models have the potential to extend 3D scene understanding not only to open set recognition, but also offer additional applications such as affordances, materials, activities, and properties of unseen environments. The goal of this workshop is to bundle these siloed efforts and to discuss and establish clear task definitions, evaluation metrics, and benchmark datasets.",
@@ -104,7 +121,7 @@ const research = [
       "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops",
     researchYr: 2023,
     citebox: "popup6",
-    image: "assets/images/opensun1.png",
+    image: "assets/images/opensun3d1.png",
     citation: {
       vancouver:
         "This report provides an overview of the challenge hosted at the OpenSUN3D Workshop on Open-Vocabulary 3D Scene Understanding held in conjunction with ICCV 2023. The goal of this workshop series is to provide a platform for exploration and discussion of open-vocabulary 3D scene understanding tasks, including but not limited to segmentation, detection and mapping. We provide an overview of the challenge hosted at the workshop, present the challenge dataset, the evaluation methodology, and brief descriptions of the winning methods.",
