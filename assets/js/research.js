@@ -4,13 +4,30 @@ const researchTable = document.querySelector(".main");
 
 const research = [
     {
+    title: "Scalable 3D Reconstruction and Understanding",
+    authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Xiyi Chen, Dongki Jung, Anshul Rai, Guan-Ming Su, Dinesh Manocha, Ming C. Lin",
+      link: "https://scale3d.github.io/",
+    conferences:
+      "Arxiv",
+    researchYr: 2026,
+    citebox: "popup9",
+    image: "assets/images/scale3d_gif.gif",
+    citation: {
+      vancouver:
+        "We present Scale3D, a unified framework for scalable 3D reconstruction and scene understanding from a complex and long image sequences. Existing methods typically emphasize either geometric reconstruction or object-level understanding, but struggle to maintain both global geometric consistency and coherent instance identities over hundreds to thousands of views. Our key insight is to exploit their mutual synergy: geometry provides a robust basis for cross-view object association, while perception regularizes and refines geometry. Scale3D decomposes long video into overlapping clusters, reconstructs cluster-wise geometry and 2D segmentation masks, and introduces a 3D-Aware Alignment module to align local predictions into a global proxy geometry while recovering temporally coherent, globally ID-consistent video object segmentation. We further propose Instance-Aware Bundle Adjustment, leveraging dense instance-consistent correspondences to refine the camera poses and geometry. We evaluate Scale3D on ScanNet200 and ScanNet++v2 across three different benchmarking tasks: 3D reconstruction, class-agnostic 3D instance segmentation, and panoptic lifting for novel-view rendering and it achieves the state-of-the-art results with the improvement of 5% on AUC@30, 11% on AP and 10% on Panoptic Quality. Overall, our results highlight the importance of jointly modeling geometry and perception for scalable scene reconstruction and understanding over long image sequences with hundreds to thousands of views.",
+    },
+    abstract:
+      "We introduce Scale3D, a novel framework for Scalable 3D reconstruction and understanding.",
+    absbox: "absPopup9",
+  },
+  {
     title: "OpenVO: Open-World Visual Odometry with Temporal Dynamics Awareness",
     authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Anh N. Nhu*, Ming C. Lin",
       link: "https://openvo.github.io/",
     conferences:
       "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
     researchYr: 2026,
-    citebox: "popup2",
+    citebox: "popup8",
     image: "assets/images/openvo.png",
     citation: {
       vancouver:
@@ -25,7 +42,7 @@ const research = [
     authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Minh Luu*, Anh Tran, Cuong Pham, Khoi Nguyen",
       link: "https://phucnda.github.io/blog/oe3dis/index.html",
     conferences:
-      "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops",
+      "IEEE/CVF International Conference on Computer Vision (ICCV)",
     researchYr: 2025,
     citebox: "popup2",
     image: "assets/images/openended.png",
@@ -137,7 +154,7 @@ const research = [
     authors: "<strong class='highlight-name'>Phuc Nguyen</strong>",
     link: "https://phucnda.github.io/blog/hardet/index.html",
     conferences:
-      "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops - 2025",
+      "IEEE/CVF International Conference on Computer Vision (ICCV) - 2025",
     subconference: "Bachelor's Thesis",
     researchYr: 2022,
     citebox: "popup7",
