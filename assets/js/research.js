@@ -5,7 +5,7 @@ const researchTable = document.querySelector(".main");
 const research = [
     {
     title: "Scalable 3D Reconstruction and Understanding",
-    authors: "<strong class='highlight-name'>Phuc Nguyen*</strong>, Xiyi Chen, Dongki Jung, Anshul Rai, Guan-Ming Su, Dinesh Manocha, Ming C. Lin",
+    authors: "<strong class='highlight-name'>Phuc Nguyen</strong>, Xiyi Chen, Dongki Jung, Anshul Rai, Guan-Ming Su, Dinesh Manocha, Ming C. Lin",
       link: "https://scale3d.github.io/",
     conferences:
       "Arxiv",
