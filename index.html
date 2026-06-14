@@ -1340,6 +1340,55 @@ body[data-theme="dark"] .exp-mentor a:hover {
     padding-right: 0 !important;
   }
 }
+/* ==================== MOBILE BIO NAME + TAGLINE FIX ==================== */
+@media (max-width: 640px) {
+  /* Name: Phuc Nguyen on first line, Duc Anh on second line */
+  .bio-name {
+    display: block !important;
+    text-align: center !important;
+    font-size: 38px !important;
+    line-height: 1.05 !important;
+    white-space: normal !important;
+  }
+
+  .bio-name-muted {
+    display: block !important;
+    font-size: 0.72em !important;
+    margin-top: 4px !important;
+    text-align: center !important;
+  }
+
+  /* Center PhD tagline and keep it away from phone edges */
+  .bio-tagline {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Put Ph.D. Student @ ... on its own centered line */
+  .tagline-static {
+    display: block !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Put Working on ... on its own centered line */
+  .tagline-typewriter-line {
+    display: block !important;
+    text-align: center !important;
+    margin-top: 4px !important;
+  }
+}
 </style>
 
 </head>
