@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://phucnda.github.io/sitemap.xml
