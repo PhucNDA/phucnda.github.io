@@ -1389,6 +1389,32 @@ body[data-theme="dark"] .exp-mentor a:hover {
     margin-top: 4px !important;
   }
 }
+/* Mobile: perfectly center PhD tagline */
+@media (max-width: 640px) {
+  .bio-tagline {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .tagline-static,
+  .tagline-typewriter-line {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .tagline-typewriter-line {
+    margin-top: 4px !important;
+  }
+}
 </style>
 
 </head>
@@ -1420,9 +1446,14 @@ body[data-theme="dark"] .exp-mentor a:hover {
     <div class="bio-section">
       <div class="bio-content">
         <span class="bio-name">Phuc Nguyen <span class="bio-name-muted">Duc Anh</span></span>
-        <p class="bio-tagline"><span class="tagline-static">
-  Ph.D. Student @ <span class="umd-font">University of Maryland, College Park</span> &nbsp;&nbsp;</span>
-  <span class="tagline-typewriter-line">Working on <span id="bio-typewriter"></span><span class="type-cursor">|</span></span></p>
+        <p class="bio-tagline">
+  <span class="tagline-static">
+    Ph.D. Student @ <span class="umd-font">University of Maryland, College Park</span>
+  </span>
+  <span class="tagline-typewriter-line">
+    Working on <span id="bio-typewriter"></span><span class="type-cursor">|</span>
+  </span>
+</p>
         <p>
           I’m a PhD student at
           <a href="https://www.umd.edu//">University of Maryland, College Park</a> advised by
@@ -1652,9 +1683,9 @@ jointly recover geometry, motion, and semantics from multi-view images and video
         <!-- Paper 1: Scale3D -->
         <div class="paper-item">
          <div class="paper-thumb">
-  <video class="paper-demo" autoplay muted loop playsinline>
-    <source src="data/scale3dpp.mp4" type="video/mp4">
-  </video>
+  <video class="paper-demo" autoplay muted loop playsinline webkit-playsinline preload="auto">
+  <source src="data/scale3dpp.mp4" type="video/mp4">
+</video>
 </div>
           <div class="paper-content">
             <div class="paper-title">
@@ -2013,6 +2044,22 @@ document.querySelectorAll('a[href]').forEach(function (link) {
 
   link.setAttribute('target', '_blank');
   link.setAttribute('rel', 'noopener noreferrer');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('video.paper-demo').forEach(function (video) {
+    video.muted = true;
+    video.playsInline = true;
+
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(function () {
+        // Some mobile browsers may still block autoplay in Low Power Mode.
+      });
+    }
+  });
 });
 </script>
 </body>
