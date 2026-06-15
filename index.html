@@ -1503,14 +1503,18 @@ body[data-theme="dark"] .exp-mentor a:hover {
     margin-top: 5px !important;
   }
 }
-/* ==================== SERVICE WINDOW IMAGE ==================== */
+/* ==================== SERVICE WINDOW IMAGE + MASCOT ==================== */
 
 .service-divider {
+  position: relative;
   margin-top: 40px;
   line-height: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  --mascot-x: 0px;
 }
 
 .service-divider::before {
@@ -1521,13 +1525,13 @@ body[data-theme="dark"] .exp-mentor a:hover {
 .service-scene {
   display: block;
   width: 100%;
-  max-width: 1700px;   /* chỉnh độ dài tại đây */
+  max-width: 1700px;
   height: auto;
   user-select: none;
   pointer-events: none;
 }
 
-/* light mode hiện ếch */
+/* Light mode: hiện cửa sổ sáng */
 .service-light-scene {
   display: block;
 }
@@ -1536,13 +1540,60 @@ body[data-theme="dark"] .exp-mentor a:hover {
   display: none;
 }
 
-/* dark mode hiện bò */
+/* Dark mode: hiện cửa sổ tối */
 body[data-theme="dark"] .service-light-scene {
   display: none;
 }
 
 body[data-theme="dark"] .service-dark-scene {
   display: block;
+}
+
+.service-mascot {
+  position: absolute;
+  left: 50%;
+  top: var(--mascot-top);
+
+  width: var(--mascot-width);
+  height: auto;
+
+  z-index: 3;
+  user-select: none;
+  pointer-events: none;
+
+  transform: translate(calc(-50% + var(--mascot-x)), var(--mascot-y));
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.18));
+}
+
+.service-frog {
+  display: block;
+
+  --mascot-top: 60%;
+  --mascot-y: -70%;
+  --mascot-width: 180px;
+}
+
+.service-cow {
+  display: none;
+
+  --mascot-top: 58%;
+  --mascot-y: -70%;
+  --mascot-width: 180px;
+}
+
+/* Dark mode: hiện bò */
+body[data-theme="dark"] .service-frog {
+  display: none;
+}
+
+body[data-theme="dark"] .service-cow {
+  display: block;
+}
+
+.service-divider.is-evading .service-mascot {
+  transform: translate(calc(-50% + var(--mascot-x)), var(--mascot-y)) scale(1.03);
 }
 
 @media (max-width: 768px) {
@@ -1552,6 +1603,11 @@ body[data-theme="dark"] .service-dark-scene {
 
   .service-scene {
     max-width: 100%;
+  }
+
+  .service-mascot {
+    width: 150px;
+    top: 60%;
   }
 }
 </style>
@@ -2089,6 +2145,9 @@ jointly recover geometry, motion, and semantics from multi-view images and video
   <div class="service-divider">
   <img src="data/service-window-light.png" alt="Light mode service window" class="service-scene service-light-scene">
   <img src="data/service-window-dark.png" alt="Dark mode service window" class="service-scene service-dark-scene">
+
+  <img src="data/frog-rest.png" alt="Frog resting on window" class="service-mascot service-frog">
+  <img src="data/cow-rest.png" alt="Cow resting on window" class="service-mascot service-cow">
 </div>
 </section>
 
@@ -2204,6 +2263,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+</script>
+<script>
+(function () {
+  const divider = document.querySelector('.service-divider');
+  if (!divider) return;
+
+  const maxMove = 130;
+  const avoidRadius = 150;
+
+  function getVisibleMascot() {
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    return divider.querySelector(isDark ? '.service-cow' : '.service-frog');
+  }
+
+  function resetMascot() {
+    divider.style.setProperty('--mascot-x', '0px');
+    divider.classList.remove('is-evading');
+  }
+
+  divider.addEventListener('mousemove', function (event) {
+    const mascot = getVisibleMascot();
+    if (!mascot) return;
+
+    const box = mascot.getBoundingClientRect();
+    const mascotCenterX = box.left + box.width / 2;
+    const distanceX = event.clientX - mascotCenterX;
+
+    if (Math.abs(distanceX) < avoidRadius) {
+      const moveX = distanceX > 0 ? -maxMove : maxMove;
+      divider.style.setProperty('--mascot-x', moveX + 'px');
+      divider.classList.add('is-evading');
+    }
+  });
+
+  divider.addEventListener('mouseleave', resetMascot);
+
+  const observer = new MutationObserver(resetMascot);
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+})();
 </script>
 </body>
 </html>
