@@ -194,17 +194,45 @@ body[data-theme="dark"] {
     transform: translateY(-1px);
   }
 
-  .theme-toggle .sun-icon {
-    display: none;
-  }
+.theme-toggle {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
 
-  body[data-theme="dark"] .theme-toggle .moon-icon {
-    display: none;
-  }
+.theme-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
 
-  body[data-theme="dark"] .theme-toggle .sun-icon {
-    display: inline;
-  }
+.theme-toggle:hover .theme-icon {
+  transform: translateY(-1px) scale(1.04);
+}
+
+/* Light mode: hiện ếch */
+.theme-toggle .frog-icon {
+  display: block;
+}
+
+.theme-toggle .cow-icon {
+  display: none;
+}
+
+/* Dark mode: hiện bò */
+body[data-theme="dark"] .theme-toggle .frog-icon {
+  display: none;
+}
+
+body[data-theme="dark"] .theme-toggle .cow-icon {
+  display: block;
+}
 
 /* ==================== DARK MODE TEXT FIX ==================== */
 
@@ -861,7 +889,13 @@ body[data-theme="dark"] .exp-company a:hover strong {
 /* ==================== SERVICE SECTION ==================== */
 
 .service-section {
-  padding-bottom: 48px;
+  padding-bottom: 0;
+  margin-bottom: 22px;
+  border-bottom: none;
+}
+
+body[data-theme="dark"] .service-section {
+  border-bottom-color: rgba(255, 255, 255, 0.22);
 }
 
 .service-block {
@@ -1469,6 +1503,57 @@ body[data-theme="dark"] .exp-mentor a:hover {
     margin-top: 5px !important;
   }
 }
+/* ==================== SERVICE WINDOW IMAGE ==================== */
+
+.service-divider {
+  margin-top: 40px;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-divider::before {
+  display: none;
+  content: none;
+}
+
+.service-scene {
+  display: block;
+  width: 100%;
+  max-width: 1700px;   /* chỉnh độ dài tại đây */
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* light mode hiện ếch */
+.service-light-scene {
+  display: block;
+}
+
+.service-dark-scene {
+  display: none;
+}
+
+/* dark mode hiện bò */
+body[data-theme="dark"] .service-light-scene {
+  display: none;
+}
+
+body[data-theme="dark"] .service-dark-scene {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .service-divider {
+    margin-top: 28px;
+  }
+
+  .service-scene {
+    max-width: 100%;
+  }
+}
 </style>
 
 </head>
@@ -1488,9 +1573,9 @@ body[data-theme="dark"] .exp-mentor a:hover {
     </ul>
 
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark mode">
-      <i class="fa-solid fa-moon moon-icon"></i>
-      <i class="fa-solid fa-sun sun-icon"></i>
-    </button>
+  <img class="theme-icon frog-icon" src="data/frog-toggle.png" alt="Light mode">
+  <img class="theme-icon cow-icon" src="data/cow-toggle.png" alt="Dark mode">
+</button>
   </div>
 </nav>
 
@@ -2001,6 +2086,10 @@ jointly recover geometry, motion, and semantics from multi-view images and video
       <li>CMSC421 (Spring&rsquo;26): Introduction to AI</li>
     </ul>
   </div>
+  <div class="service-divider">
+  <img src="data/service-window-light.png" alt="Light mode service window" class="service-scene service-light-scene">
+  <img src="data/service-window-dark.png" alt="Dark mode service window" class="service-scene service-dark-scene">
+</div>
 </section>
 
     <footer class="footer">
