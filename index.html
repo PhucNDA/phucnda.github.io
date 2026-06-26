@@ -1695,6 +1695,7 @@ body[data-theme="dark"] .service-cow {
   content: ")";
 }
 
+
 /* Mobile: split into 2 lines and remove parentheses */
 @media (max-width: 640px) {
   .venue-split {
@@ -1744,6 +1745,45 @@ body[data-theme="dark"] .service-cow {
   .venue-split .venue-short::before,
   .venue-split .venue-short::after {
     content: "" !important;
+  }
+}
+/* ==================== UNDER REVIEW DESKTOP + MOBILE FIX ==================== */
+
+/* Desktop: keep Under Review small like before */
+.venue-review {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+
+  padding: 4px 10px !important;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+
+/* Mobile only: match the full conference-name font */
+@media (max-width: 640px) {
+  .venue-review {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: fit-content !important;
+    max-width: 100% !important;
+
+    padding: 9px 12px !important;
+
+    font-size: clamp(9.5px, 2.65vw, 12px) !important;
+    line-height: 1.12 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.35px !important;
+
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
   }
 }
 </style>
