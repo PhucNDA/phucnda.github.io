@@ -16,6 +16,9 @@
   <meta property="og:title" content="Phuc Nguyen | Working on 3D/4D Vision">
   <meta property="og:description" content="PhucNDA's official project page — explore his work on 3D/4D vision.">
   <meta property="og:image" content="https://phucnda.github.io/data/avatarphuc.jpg">
+  <meta property="og:image:secure_url" content="https://phucnda.github.io/data/avatarphuc.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Portrait photo of Phuc Nguyen Duc Anh">
   <meta property="og:site_name" content="PhucNDA's Project Page">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -48,27 +51,49 @@
   gtag('config', 'G-M11CMZ12Q');
 </script>
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Phuc Nguyen Duc Anh",
-          "alternateName": "PhucNDA",
-          "image": "https://phucnda.github.io/data/avatarphuc.jpg",
-          "jobTitle": "PhD Student in Computer Science",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "University of Maryland"
-          },
-          "url": "https://phucnda.github.io",
-          "sameAs": [
-            "https://github.com/PhucNDA",
-            "https://www.linkedin.com/in/phucnda/",
-            "https://scholar.google.com/citations?hl=en&user=9tHv7IQAAAAJ",
-            "https://x.com/phucnda",
-            "https://www.facebook.com/jacketammie"
-          ]
-        }
-        </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://phucnda.github.io/#person",
+      "name": "Phuc Nguyen Duc Anh",
+      "alternateName": ["Phuc Nguyen", "PhucNDA"],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://phucnda.github.io/data/avatarphuc.jpg"
+      },
+      "jobTitle": "PhD Student in Computer Science",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "University of Maryland"
+      },
+      "url": "https://phucnda.github.io/",
+      "sameAs": [
+        "https://github.com/PhucNDA",
+        "https://www.linkedin.com/in/phucnda/",
+        "https://scholar.google.com/citations?hl=en&user=9tHv7IQAAAAJ",
+        "https://x.com/phucnda",
+        "https://www.facebook.com/jacketammie"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://phucnda.github.io/#webpage",
+      "url": "https://phucnda.github.io/",
+      "name": "Phuc Nguyen Duc Anh | PhD in Computer Science at UMD",
+      "description": "Phuc Nguyen is a PhD student in Computer Science at the University of Maryland. His research focuses on 3D/4D Computer Vision.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://phucnda.github.io/data/avatarphuc.jpg"
+      },
+      "mainEntity": {
+        "@id": "https://phucnda.github.io/#person"
+      }
+    }
+  ]
+}
+</script>
 <style>
   /* ==================== LIGHT / DARK DOTTED BACKGROUND ==================== */
 
@@ -1707,8 +1732,8 @@ body[data-theme="dark"] .service-cow {
     width: fit-content !important;
     max-width: 100% !important;
 
-    gap: 5px !important;
-    padding: 9px 12px !important;
+    gap: 3px !important;
+    padding: 6px 10px !important;
 
     white-space: nowrap !important;
     box-sizing: border-box !important;
@@ -1747,10 +1772,11 @@ body[data-theme="dark"] .service-cow {
     content: "" !important;
   }
 }
-/* ==================== UNDER REVIEW DESKTOP + MOBILE FIX ==================== */
+/* ==================== UNDER REVIEW + AWARD DESKTOP + MOBILE FIX ==================== */
 
-/* Desktop: keep Under Review small like before */
-.venue-review {
+/* Desktop: keep Under Review and Compute Champion Award small like before */
+.venue-review,
+.venue-award {
   display: inline-block !important;
   width: fit-content !important;
   max-width: 100% !important;
@@ -1765,9 +1791,10 @@ body[data-theme="dark"] .service-cow {
   box-sizing: border-box !important;
 }
 
-/* Mobile only: match the full conference-name font */
+/* Mobile only: make both match the full conference-name font */
 @media (max-width: 640px) {
-  .venue-review {
+  .venue-review,
+  .venue-award {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1775,7 +1802,7 @@ body[data-theme="dark"] .service-cow {
     width: fit-content !important;
     max-width: 100% !important;
 
-    padding: 9px 12px !important;
+    padding: 6px 10px !important;
 
     font-size: clamp(9.5px, 2.65vw, 12px) !important;
     line-height: 1.12 !important;
@@ -1858,7 +1885,7 @@ jointly recover geometry, motion, and semantics from multi-view images and video
       </div>
       <div class="bio-photo">
         <a href="data/avatarphuc.jpg">
-          <img alt="Phuc Nguyen Duc Anh" src="data/avatarphuc.jpg">
+          <img alt="Portrait photo of Phuc Nguyen Duc Anh" src="data/avatarphuc.jpg">
         </a>
       </div>
     </div>
