@@ -1610,6 +1610,142 @@ body[data-theme="dark"] .service-cow {
     top: 60%;
   }
 }
+/* ==================== FINAL MOBILE BIO TAGLINE + BUTTON FIX ==================== */
+@media (max-width: 640px) {
+  /* Make Ph.D. Student and @ University line split cleanly */
+  .tagline-static {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 2px !important;
+  }
+
+  .tagline-degree,
+  .tagline-school {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .tagline-school {
+    line-height: 1.35 !important;
+  }
+
+ /* Keep 4 social buttons per row on mobile, but make them smaller */
+.bio-links {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 7px 5px !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  margin: 22px auto 0 auto !important;
+  padding: 0 !important;
+
+  justify-content: center !important;
+  align-items: center !important;
+
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.bio-link-btn {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+
+  margin: 0 !important;
+  padding: 6px 3px !important;
+
+  box-sizing: border-box !important;
+
+  font-size: clamp(9px, 2.45vw, 11.5px) !important;
+  line-height: 1 !important;
+
+  gap: 3px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+}
+
+.bio-link-btn i {
+  flex-shrink: 0 !important;
+  font-size: clamp(10px, 2.6vw, 12px) !important;
+}
+}
+/* ==================== RESPONSIVE VENUE BADGE SPLIT ==================== */
+
+/* Desktop: still show full venue + (CVPR/ICCV year) on one line */
+.venue-split {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+}
+
+.venue-split .venue-short::before {
+  content: "(";
+}
+
+.venue-split .venue-short::after {
+  content: ")";
+}
+
+/* Mobile: split into 2 lines and remove parentheses */
+@media (max-width: 640px) {
+  .venue-split {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    width: fit-content !important;
+    max-width: 100% !important;
+
+    gap: 5px !important;
+    padding: 9px 12px !important;
+
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  .venue-split .venue-title {
+    display: block !important;
+    white-space: nowrap !important;
+    line-height: 1.12 !important;
+    font-weight: 800 !important;   /* full conference name bold again */
+    letter-spacing: -0.35px !important;
+  }
+
+  /* CVPR full name is longer -> slightly smaller so it doesn't overflow */
+  .venue-cvpr.venue-split .venue-title {
+    font-size: clamp(8.8px, 2.35vw, 10.8px) !important;
+  }
+
+  /* ICCV full name is shorter -> can be larger */
+  .venue-iccv.venue-split .venue-title {
+    font-size: clamp(10.8px, 2.95vw, 13.2px) !important;
+  }
+
+  .venue-split .venue-short {
+    display: block !important;
+    white-space: nowrap !important;
+
+    font-size: clamp(12.5px, 3.15vw, 14.5px) !important;
+    line-height: 1.05 !important;
+    font-weight: 800 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .venue-split .venue-short::before,
+  .venue-split .venue-short::after {
+    content: "" !important;
+  }
+}
 </style>
 
 </head>
@@ -1643,7 +1779,8 @@ body[data-theme="dark"] .service-cow {
         <span class="bio-name">Phuc Nguyen <span class="bio-name-muted">Duc Anh</span></span>
         <p class="bio-tagline">
   <span class="tagline-static">
-    Ph.D. Student @ <span class="umd-font">University of Maryland, College Park</span>
+    <span class="tagline-degree">Ph.D. Student</span>
+<span class="tagline-school">@ <span class="umd-font">University of Maryland, College Park</span></span>
   </span>
   <span class="tagline-typewriter-line">
     Working on <span id="bio-typewriter"></span><span class="type-cursor">|</span>
@@ -1929,7 +2066,10 @@ jointly recover geometry, motion, and semantics from multi-view images and video
               Ming C. Lin
             </div>
             <div class="venue-row">
-              <span class="venue-badge venue-cvpr">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)</span>
+              <span class="venue-badge venue-cvpr venue-split">
+  <span class="venue-title">IEEE/CVF Conference on Computer Vision and Pattern Recognition</span>
+  <span class="venue-short">CVPR 2026</span>
+</span>
               <span class="venue-badge venue-award">Compute Champion Award</span>
                <p class="paper-desc">
               We introduce OpenVO, a novel framework for Open-world Visual Odometry (VO) with temporal awareness under limited input conditions.
@@ -1966,7 +2106,10 @@ jointly recover geometry, motion, and semantics from multi-view images and video
               Khoi Nguyen
             </div>
             <div class="venue-row">
-              <span class="venue-badge venue-cvpr">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2025)</span>
+              <span class="venue-badge venue-cvpr venue-split">
+  <span class="venue-title">IEEE/CVF Conference on Computer Vision and Pattern Recognition</span>
+  <span class="venue-short">CVPR 2025</span>
+</span>
                <p class="paper-desc">
               A novel class-agnostic approach for 3D instance segmentation that leverages 2D mask tracking to segment 3D objects in point cloud scenes.
             </p>
@@ -2002,7 +2145,10 @@ jointly recover geometry, motion, and semantics from multi-view images and video
               Khoi Nguyen
             </div>
             <div class="venue-row">
-              <span class="venue-badge venue-iccv">IEEE/CVF International Conference on Computer Vision (ICCV 2025)
+              <span class="venue-badge venue-iccv venue-split">
+  <span class="venue-title">IEEE/CVF International Conference on Computer Vision</span>
+  <span class="venue-short">ICCV 2025</span>
+</span>
 </span><p class="paper-desc">
               Introducing the Vocablulary-Free 3D point cloud instance segmentation with different solid baselines and a novel pointwise method using multimodal LLM.
             </p>
@@ -2034,7 +2180,10 @@ jointly recover geometry, motion, and semantics from multi-view images and video
               <strong>Phuc Nguyen</strong>
             </div>
             <div class="venue-row">
-              <span class="venue-badge venue-iccv">IEEE/CVF International Conference on Computer Vision (ICCV 2025)</span>
+              <span class="venue-badge venue-iccv venue-split">
+  <span class="venue-title">IEEE/CVF International Conference on Computer Vision</span>
+  <span class="venue-short">ICCV 2025</span>
+</span>
               <div class="paper-desc"><strong>Bachelor's Thesis</strong></div>
               <p class="paper-desc">
               Hybrid-Anchor Rotation Detector (HA-RDet), which combines the advantages of both anchor-based and anchor-free schemes for oriented object detection.
@@ -2074,7 +2223,10 @@ jointly recover geometry, motion, and semantics from multi-view images and video
               Khoi Nguyen
             </div>
             <div class="venue-row">
-              <span class="venue-badge venue-cvpr">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2024)</span>
+              <span class="venue-badge venue-cvpr venue-split">
+  <span class="venue-title">IEEE/CVF Conference on Computer Vision and Pattern Recognition</span>
+  <span class="venue-short">CVPR 2024</span>
+</span>
               <p class="paper-desc">
               Tackling the open-vocabulary 3D point cloud instance segmentation by using 2D prior.
             </p>
