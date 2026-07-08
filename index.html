@@ -27,7 +27,7 @@
   <meta name="twitter:description" content="Explore PhucNDA's research in AI, 3D/4D scene reconstruction & understanding.">
   <meta name="twitter:image" content="https://phucnda.github.io/data/avatarphuc.jpg">
 
-  <meta name="keywords" content="Phuc Nguyen, Duc Anh Phuc Nguyen, Nguyen Duc Anh Phuc, PhucNDA, Phuc Nguyen Duc Anh, PhD UMD, SpreeAI, VinAI, Computer Vision, Robotics, 3D Scene Understanding, Artificial Intelligence, Github PhucNDA">
+  <meta name="keywords" content="Phuc Nguyen, Duc Anh Phuc Nguyen, Nguyen Duc Anh Phuc, PhucNDA, Phuc Nguyen Duc Anh, PhD UMD, VinAI, Computer Vision, Robotics, 3D Scene Understanding, Artificial Intelligence, Github PhucNDA">
 
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
@@ -1813,6 +1813,68 @@ body[data-theme="dark"] .service-cow {
     box-sizing: border-box !important;
   }
 }
+/* ==================== MOBILE EXPERIENCE DATE ALIGN FIX ==================== */
+@media (max-width: 640px) {
+  #experience .exp-item {
+    display: grid !important;
+    grid-template-columns: 52px 1fr !important;
+    grid-template-areas:
+      "logo content"
+      "logo date" !important;
+    column-gap: 12px !important;
+    align-items: start !important;
+  }
+
+  #experience .exp-logo {
+    grid-area: logo !important;
+    width: 52px !important;
+    min-width: 52px !important;
+    height: 52px !important;
+  }
+
+  #experience .exp-logo img {
+    width: 52px !important;
+    height: 52px !important;
+    object-fit: contain !important;
+  }
+
+  #experience .exp-content {
+    grid-area: content !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #experience .exp-date {
+    grid-area: date !important;
+
+    display: block !important;
+    position: static !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 6px 0 0 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+    justify-self: start !important;
+    align-self: start !important;
+
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+
+    white-space: normal !important;
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    color: #64748b !important;
+  }
+
+  body[data-theme="dark"] #experience .exp-date {
+    color: #94a3b8 !important;
+  }
+}
 </style>
 
 </head>
@@ -1857,15 +1919,6 @@ body[data-theme="dark"] .service-cow {
           I’m a PhD student at
           <a href="https://www.umd.edu//">University of Maryland, College Park</a> advised by
           <a href="https://www.cs.umd.edu/~lin//">Prof. Ming C. Lin</a>!
-          <p>I work at
-          <a href="https://stackav.com/">StackAV<em style="font-weight:400;"> (previously ArgoAI)</em></a>, in close collaboration with
-          <a href="https://scholar.google.com/citations?user=Z6gnDIEAAAAJ&hl=en&oi=ao">Dr. Sudipta N. Sinha</a>. Previously, I worked as a Research Engineer at
-          <a href="https://spreeai.com/">SpreeAI</a>, where my work focuses on multimodal representations in collaboration with
-          at <a href="https://www.aayushbansal.xyz/">Dr. Aayush Bansal</a> and
-          <a href="https://minhpvo.github.io//">Dr. Minh Vo</a>. I was an AI Research Resident at
-          <a href="https://vinai.io/">VinAI Research<em style="font-weight:400;"> (acquired by Qualcomm)</em></a>, where I worked on 3D scene understanding under the supervision of 
-          <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Dr. Anh Tran</a> and
-          <a href="https://sites.google.com/view/cuongpham/home">Prof. Cuong Pham</a>.
         </p>
         <p>
           My research focuses on <strong>3D/4D reconstruction and understanding</strong>, particularly on developing scalable methods that
@@ -1873,7 +1926,6 @@ jointly recover geometry, motion, and semantics from multi-view images and video
         </p>
         <div class="bio-links">
           <a href="mailto:phucnda@gmail.com" class="bio-link-btn"><i class="fa-solid fa-envelope"></i> Email</a>
-          <a href="https://phucnda.github.io/data/phucnda_CV.pdf" class="bio-link-btn"><i class="fa-solid fa-file-lines"></i> CV</a>
           <a href="https://github.com/PhucNDA" class="bio-link-btn"><i class="fa-brands fa-github"></i> GitHub</a>
           <a href="https://scholar.google.com/citations?hl=en&user=9tHv7IQAAAAJ" class="bio-link-btn"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
           <a href="https://www.linkedin.com/in/phucnda/" class="bio-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
@@ -1936,12 +1988,6 @@ jointly recover geometry, motion, and semantics from multi-view images and video
           <span class="news-date">Feb 2025</span>
           <span class="news-emoji">📌</span>
           <span><a href="https://any3dis.github.io/" class="paper-name">Any3DIS</a> has been accepted to <strong>CVPR 2025</strong>. Cheerz!</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-date">Nov 2024</span>
-          <span class="news-emoji">💼</span>
-          <span>I joined <a href="https://spreeai.com/">SpreeAI</a> as a Research Engineer.</span>
         </div>
 
         <div class="news-item">
@@ -2008,31 +2054,11 @@ jointly recover geometry, motion, and semantics from multi-view images and video
 
       <div class="exp-item">
         <div class="exp-logo">
-          <img src="data/logo/spreeai.png" alt="SpreeAI">
-        </div>
-        <div class="exp-content">
-          <div><span class="exp-role">Research Engineer</span> &nbsp;&bull;&nbsp;
-            <span class="exp-company"><a href="https://spreeai.com/"><strong>SpreeAI</strong></a></span>
-            <!-- <span class="incoming-badge">Incoming</span> -->
-          </div>
-          <div class="exp-desc">
-  Worked on learning representations for physically-grounded multimodal-LLM.
-</div>
-
-<div class="exp-mentor">
-  Mentor: <a href="https://www.cs.cmu.edu/~aayushb/">Dr. Aayush Bansal</a> and
-  <a href="https://minhpvo.github.io/">Dr. Minh Vo</a></div>
-        </div>
-        <div class="exp-date">Nov 2024 &ndash; Sep 2025</div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-logo">
           <img src="data/logo/vinai.png" alt="VinAI Research">
         </div>
         <div class="exp-content">
           <div><span class="exp-role">AI Research Resident</span> &nbsp;&bull;&nbsp;
-            <span class="exp-company"><a href="https://www.vinai.io/"><strong>VinAI Research</strong></a> <em style="font-weight:400;font-size:13px;">(Acquired by Qualcomm)</em></span>
+            <span class="exp-company"><a href="https://www.vinai.io/"><strong>VinAI Research</strong></a> <em style="font-weight:400;font-size:13px;"></em></span>
           </div>
           <div class="exp-desc">
   Focused on 3D scene reconstruction-understanding and vision-language model.
@@ -2045,7 +2071,7 @@ jointly recover geometry, motion, and semantics from multi-view images and video
   <a href="https://scholar.google.com/citations?user=hRV0tY4AAAAJ&hl=en">Prof. Minh Hoai</a>
 </div>
         </div>
-        <div class="exp-date">Feb 2023 &ndash; Nov 2024</div>
+        <div class="exp-date">Feb 2023 &ndash; Mar 2025</div>
       </div>
 
       <!-- <div class="exp-item">
@@ -2336,31 +2362,6 @@ jointly recover geometry, motion, and semantics from multi-view images and video
       </ul>
     </section>
 
-
-   <!-- ==================== SERVICE ==================== -->
-<section id="service" class="section service-section">
-  <h2 class="section-heading">Service</h2>
-
-  <div class="service-block">
-    <div class="service-subheading"><strong>Reviewer:</strong></div>
-    <ul class="service-list">
-      <li>IEEE/CVF Computer Vision and Pattern Recognition (CVPR&rsquo;24,26)</li>
-      <li>IEEE/CVF International Conference on Computer Vision (ICCV&rsquo;25)</li>
-      <li>European Conference on Computer Vision (ECCV&rsquo;24)</li>
-      <li>International Conference on Learning Representations (ICLR&rsquo;25)</li>
-      <li>Neural Information Processing Systems (NeurIPS&rsquo;24,26)</li>
-      <li>British Machine Vision Conference (BMVC&rsquo;25)</li>
-      <li>Transactions on Machine Learning Research (TMLR&rsquo;25,26)</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <div class="service-subheading"><strong>Teaching Assistant UMD:</strong></div>
-    <ul class="service-list">
-      <li>CMSC420 (Fall&rsquo;25): Advanced Data Structures</li>
-      <li>CMSC421 (Spring&rsquo;26): Introduction to AI</li>
-    </ul>
-  </div>
   <div class="service-divider">
   <img src="data/service-window-light.png" alt="Light mode service window" class="service-scene service-light-scene">
   <img src="data/service-window-dark.png" alt="Dark mode service window" class="service-scene service-dark-scene">
