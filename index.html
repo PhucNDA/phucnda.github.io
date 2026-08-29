@@ -2144,7 +2144,43 @@ jointly recover geometry, motion, and semantics from multi-view images and video
 </h2>
       <div class="papers-list">
 
-<!-- Paper 0: Scale3D -->
+<!-- Paper: 4D-NVS -->
+        <div class="paper-item">
+         <div class="paper-thumb">
+  <video class="paper-demo" autoplay muted loop playsinline webkit-playsinline preload="auto">
+  <source src="data/4dnvs-drive.mp4" type="video/mp4">
+</video>
+</div>
+          <div class="paper-content">
+            <div class="paper-title">
+              <a href="https://4dnvs-drive.github.io/">Efficient Generative 4D Novel View Synthesis
+for Driving Scenes from Monocular Videos</a>
+            </div>
+            <div class="paper-authors">
+              <strong>Phuc Nguyen</strong>,
+              Samin Khan,
+              Ming C. Lin,
+              Sudipta N. Sinha
+            </div>
+            <div class="venue-row">
+              <!-- <span class="venue-badge venue-review">Preprint</span> -->
+              <p class="paper-desc">
+              We introduce 4DNVS-Drive, an efficient generative framework for driving scenes 4D Novel View Synthesis.
+            </p>
+              <!-- <div class="paper-links">
+                <button class="paper-link-btn abstract-toggle" type="button" data-target="abs-scale3d">
+    <i class="fa-solid fa-align-left"></i> ABS</button> -->
+                <a href="https://4dnvs-drive.github.io/" class="paper-link-btn"><i class="fa-solid fa-globe"></i> Project</a>
+              </div>
+              <!-- <div id="abs-scale3d" class="abstract-box">
+  We present Scale3D, a unified framework for scalable 3D reconstruction and scene understanding from a complex and long image sequences. Existing methods typically emphasize either geometric reconstruction or object-level understanding, but struggle to maintain both global geometric consistency and coherent instance identities over hundreds to thousands of views. Our key insight is to exploit their mutual synergy: geometry provides a robust basis for cross-view object association, while perception regularizes and refines geometry. Scale3D decomposes long video into overlapping clusters, reconstructs cluster-wise geometry and 2D segmentation masks, and introduces a 3D-Aware Alignment module to align local predictions into a global proxy geometry while recovering temporally coherent, globally ID-consistent video object segmentation. We further propose Instance-Aware Bundle Adjustment, leveraging dense instance-consistent correspondences to refine the camera poses and geometry. We evaluate Scale3D on ScanNet200 and ScanNet++v2 across three different benchmarking tasks: 3D reconstruction, class-agnostic 3D instance segmentation, and panoptic lifting for novel-view rendering and it achieves the state-of-the-art results with the improvement of 5% on AUC@30, 11% on AP and 10% on Panoptic Quality. Overall, our results highlight the importance of jointly modeling geometry and perception for scalable scene reconstruction and understanding over long image sequences with hundreds to thousands of views.
+</div> -->
+            </div>
+            
+          </div>
+        </div>
+
+<!-- Paper: Scale3D -->
         <div class="paper-item">
          <div class="paper-thumb">
   <video class="paper-demo" autoplay muted loop playsinline webkit-playsinline preload="auto">
@@ -2165,7 +2201,7 @@ jointly recover geometry, motion, and semantics from multi-view images and video
               Ming C. Lin
             </div>
             <div class="venue-row">
-              <span class="venue-badge venue-review">Preprint</span>
+              <!-- <span class="venue-badge venue-review">Preprint</span> -->
               <p class="paper-desc">
               We introduce Scale3D, a novel framework for Scalable 3D reconstruction and understanding.
             </p>
@@ -2184,7 +2220,7 @@ jointly recover geometry, motion, and semantics from multi-view images and video
           </div>
         </div>
 
-<!-- Paper 1: PanoSeg3R -->
+<!-- Paper: PanoSeg3R -->
         <div class="paper-item">
          <div class="paper-thumb">
             <img src="data/panoseg3r.png" alt="PanoSeg3R teaser">
@@ -2202,18 +2238,18 @@ an Automatic Data Curation Pipeline</a>
               Dinesh Manocha
             </div>
             <div class="venue-row">
-              <span class="venue-badge venue-review">Preprint</span>
+              <!-- <span class="venue-badge venue-review">Preprint</span> -->
               <p class="paper-desc">
               We introduce a feed-forward framework for panoramic 3D semantic segmentation and a data-curation pipeline for indoor semantic panorama datasets.
             </p>
               <div class="paper-links">
-                <button class="paper-link-btn abstract-toggle" type="button" data-target="abs-scale3d">
+                <button class="paper-link-btn abstract-toggle" type="button" data-target="abs-panoseg">
     <i class="fa-solid fa-align-left"></i> ABS</button>
                 <!-- <a href="https://scale3d-scene.github.io/" class="paper-link-btn"><i class="fa-solid fa-globe"></i> Project</a> -->
                 <!-- <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Pham_HyperCUT_Video_Sequence_From_a_Single_Blurry_Image_Using_Unsupervised_CVPR_2023_paper.html" class="paper-link-btn"><i class="fa-solid fa-file-lines"></i> Paper</a> -->
                 <!-- <a href="https://github.com/PhucNDA/Scale3D" class="paper-link-btn"><i class="fa-brands fa-github"></i> Code</a> -->
               </div>
-              <div id="abs-scale3d" class="abstract-box">
+              <div id="abs-panoseg" class="abstract-box">
   We present PanoSeg3R, a feed-forward framework for 3D panoramic semantic segmentation. Unlike existing methods designed for perspective inputs, PanoSeg3R jointly predicts 3D geometry and multi-view semantic segmentation in one single forward pass. Built upon a pretrained reconstruction backbone that supports panoramic images, our approach extends feed-forward 3D reconstruction with a query-based mask decoder. Furthermore, we introduce an automatic panorama data curation pipeline that leverages the complementary strengths of off-the-shelf foundation models to generate reliable pseudo semantic annotations, substantially expanding the training data and improving zero-shot generalization. PanoSeg3R achieves state-of-the-art performance on panoramic 3D semantic segmentation, improving 3D mIoU by up to 16.02 on ScanNet++, while the curated training data further improves zero-shot performance by up to 4.26 and 43.28 mIoU on Stanford2D3D and ToF-360, respectively.
 </div>
             </div>
