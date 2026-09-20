@@ -2219,6 +2219,51 @@ for Driving Scenes from Monocular Videos</a>
           </div>
         </div>
 
+<!-- Paper: AeroVO -->
+<div class="paper-item">
+  <div class="paper-thumb">
+    <video class="paper-demo" autoplay muted loop playsinline webkit-playsinline preload="auto">
+      <source src="data/aero_vo.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="paper-content">
+    <div class="paper-title">
+      <a>
+        AeroVO: Lightweight and Real-Time Visual Odometry for Unmanned Aerial Vehicles
+      </a>
+    </div>
+
+    <div class="paper-authors">
+      Kaushal Janga*,
+      Parthav Poudel*,
+      <strong>Phuc Nguyen*</strong>,
+      Ming C. Lin
+    </div>
+
+    <div class="venue-row">
+
+      <p class="paper-desc">
+        We introduce AeroVO, a lightweight two-frame framework that combines optical flow and monocular geometry to estimate metric linear and angular velocities for aerial visual odometry.
+      </p>
+
+      <div class="paper-links">
+        <button
+          class="paper-link-btn abstract-toggle"
+          type="button"
+          data-target="abs-aerovo">
+          <i class="fa-solid fa-align-left"></i> ABS
+        </button>
+      </div>
+
+      <div id="abs-aerovo" class="abstract-box">
+        Monocular visual odometry for unmanned aerial vehicles is challenged by unrestricted 6-DoF motion and large variations in altitude, velocity, scene scale, and frame rate. Existing methods, developed primarily for ground vehicles, often fail to model how geometry and observation time jointly affect aerial motion. We present AeroVO, a lightweight two-frame framework that combines optical flow and monocular geometry to estimate metric linear and angular velocities. AeroVO introduces a scale- and time-aware 3D flow-velocity representation, a multi-scale geometry encoder, and motion-guided fusion for robust ego-motion estimation across diverse flight conditions. We further introduce Reconstructed Aerial Visual Environments (RAVE), a controlled aerial VO dataset containing 140 flight sequences and 21,000 frames rendered from photogrammetric reconstructions of seven real outdoor environments. Experiments on TartanAir and RAVE show that AeroVO outperforms both the evaluated two-frame baselines and a state-of-the-art multiview geometry estimator by 54.7% and 68.7%, respectively, while operating at 30.2 FPS, supporting real-time aerial ego-motion estimation.
+      </div>
+
+    </div>
+  </div>
+</div> 
+
 <!-- Paper: PanoSeg3R -->
         <div class="paper-item">
          <div class="paper-thumb">
@@ -2259,7 +2304,8 @@ an Automatic Data Curation Pipeline</a>
         <!-- Paper 2: OpenVO -->
         <div class="paper-item">
          <div class="paper-thumb">
-            <img src="data/openvo.png" alt="OpenVO teaser">
+    <video class="paper-demo" autoplay muted loop playsinline webkit-playsinline preload="auto">
+      <source src="data/open_vo.mp4" type="video/mp4">
           </div>
           <div class="paper-content">
             <div class="paper-title">
